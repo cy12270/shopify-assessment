@@ -136,7 +136,6 @@ main {
 .image-container {
     width: var(--Width);
     height: 390px;
-    flex-shrink: 0;
 }
 
 .image-container > img {
@@ -165,4 +164,22 @@ main {
     width: 26.147px;
     height: 26.147px;
     flex-shrink: 0;
+}
+
+.carousel {
+    scroll-snap-type: x mandatory;
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 800px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.carousel-item {
+    scroll-snap-align: center;
+    display: inline-block;
+    margin: 0 20px;
+    width: 40%;
+    white-space: normal;
+    overflow: hidden;
 }
