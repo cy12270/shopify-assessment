@@ -11,6 +11,10 @@
 
     /* font */
     --Primary-Font: "Chivo", sans-serif;
+
+    /* margin */
+    --Horizontal-Margin: 16px;
+    --Vertical-Margin: 24px;
 }
 
 body {
@@ -356,7 +360,7 @@ main {
 
 .product-content-desc > ul {
     margin: 0;
-    padding: 0;
+    padding-left: 0;
 
     display: flex;
     flex-direction: column;
@@ -365,10 +369,11 @@ main {
 }
 
 .product-content-desc > ul > li {
-    /* list-style-type: none; */
-    list-style-image: url('../icons/Check.svg');
-    margin-left: 26px;
-    padding-left: 0px;
+    list-style: none;
+    background-image: url(../icons/Check.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 15px 15px;
 
     text-align: left;
     color: var(--Black, #1D211E);
@@ -377,4 +382,53 @@ main {
     font-style: light;
     font-weight: 200;
     line-height: 15px; 
+}
+
+.product-content-desc > ul > li > span {
+    padding-left: 24px;
+}
+
+.frequency {
+    margin: var(--Vertical-Margin) var(--Horizontal-Margin);
+
+    width: 357px;
+    height: 137px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.frequency > .title {
+    width: 357px;
+    height: 16px;
+
+    color: var(--Black);
+    font-family: Chivo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px; /* 93.75% */
+}
+
+.subscription {
+    float: right;
+}
+
+.subscription > span {
+    color: #7D7D7D;
+    font-family: Chivo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px; /* 125% */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+
+    vertical-align: top;
 }
