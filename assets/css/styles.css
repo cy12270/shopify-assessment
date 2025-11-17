@@ -392,7 +392,7 @@ main {
     margin: var(--Vertical-Margin) var(--Horizontal-Margin);
 
     width: 357px;
-    height: 137px;
+    height: 163px;
 
     display: inline-flex;
     flex-direction: column;
@@ -400,7 +400,7 @@ main {
     gap: 16px;
 }
 
-.frequency > .title {
+.title {
     width: 357px;
     height: 16px;
 
@@ -431,4 +431,138 @@ main {
     text-underline-position: from-font;
 
     vertical-align: top;
+}
+
+.frequency-option {
+    margin: 2px 16px 0 0;
+    display: flex;
+    width: 323px;
+    padding: 14px 16px 18px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frequency-option .label-group {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* spacing between icon and text */
+}
+
+.label-group > span {
+    color: var(--Black);
+    font-family: Chivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px; /* 107.143% */
+    text-transform: uppercase;
+}
+
+.frequency-option i img {
+    width: 16px;
+    height: 16px;
+}
+
+.current-price {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--Black);
+    font-family: Chivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.frequency-option > .label-group > .discount-info {
+    display: flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    border-radius: 4px;
+    background: var(--Vivid-Yellow, #FFE535);
+}
+
+.frequency-option > .label-group > .discount-info {
+    width: 57px;
+    height: 14px;
+
+    color: var(--Black, #242328);
+    text-align: center;
+    font-family: Chivo;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.price-group {
+    display: flex;
+    align-items: flex-end; /* right align */
+    gap: 2px;
+}
+
+.frequency-option .original-price { 
+    padding: 0 4px 1.5px 0;
+
+    color: var(--Grey, #959595);
+    font-family: Chivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: line-through;
+}
+
+.frequency-option .current-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.frequency > .selected {
+    border-radius: 4px;
+    border-top: 1px solid #F1C40F;
+    border-right: 1px solid #F1C40F;
+    border-bottom: 4px solid #F1C40F;
+    border-left: 1px solid #F1C40F;
+}
+
+.frequency > .default {
+    border-radius: 4px;
+    border: 1px solid #ADADAD;
+}
+
+.bundle-save {
+    margin: 0 var(--Horizontal-Margin) var(--Vertical-Margin);
+
+    width: 350px;
+    height: 125px;
+}
+
+.bundle-save > .options {
+    width: 350px;
+    height: 138px;
+
+    display: flex;
+    gap: 9px;
+}
+
+.options > .option {
+    width: 108px;
+    height: 117px;
+
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 0 4px 0 0 #000;
+}
+
+.option.special {
+    width: 108px;
+    height: 138px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #DEDEDE;
 }
