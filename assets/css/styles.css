@@ -11,6 +11,8 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     width: var(--Width, 390px);
     height: var(--Height, 2001px);
 }
@@ -19,6 +21,7 @@ body {
     width: var(--Width, 390px);
     height: var(--Height, 2001px);
     background-color: #FFFFFF;
+    border: 1px solid blue;
 }
 
 .promotional-banner {
@@ -55,6 +58,7 @@ header {
     padding: 16px;
     align-items: center;
     gap: 62px;
+    border: 1px solid blue;
 }
 
 .logo {
@@ -134,15 +138,18 @@ main {
     width: var(--Width);
 }
 
-.image-container {
+.product-image {
+    margin: 0;
     width: var(--Width);
-    height: 390px;
+    height: var(--Width);
 }
 
-.image-container > img {
-    width: 338px;
-    height: 363px;
-    flex-shrink: 0;
+.product-image > img {
+    /* width: 338px; */
+    /* height: 363px; */
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: cover;
 }
 
 .search-icon {
@@ -167,7 +174,7 @@ main {
     flex-shrink: 0;
 }
 
-.carousel {
+/* .slideshow {
     scroll-snap-type: x mandatory;
     margin: 0 auto;
     padding: 30px 0;
@@ -176,11 +183,42 @@ main {
     overflow-x: scroll;
 }
 
-.carousel-item {
+.slideshow > .slide {
     scroll-snap-align: center;
     display: inline-block;
     margin: 0 20px;
     width: 40%;
     white-space: normal;
     overflow: hidden;
+} */
+
+.slideshow {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.slideshow > .slide {
+    width: 75px;
+    height: 75px;
+    border-radius: 4px;
+    border: 1px solid #1D211E;
+    /* border-top: 1px solid #1D211E;
+    border-right: 1px solid #1D211E;
+    border-bottom: 4px solid #1D211E;
+    border-left: 1px solid #1D211E; */
+    /* background: url(<path-to-image>) lightgray 50% / cover no-repeat, url(<path-to-image>) lightgray 2.954px -0.126px / 92.122% 93.339% no-repeat, #FFF8CC; */
+}
+
+.slide-image {
+    margin: 0;
+    padding: 0;
+}
+
+.slide-image > img {
+    max-width: 75px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
 }
