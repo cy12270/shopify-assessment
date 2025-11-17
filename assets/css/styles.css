@@ -4,7 +4,10 @@
 
     /* color */
     --Bright-Yellow: #FFE535;
+    --Vivid-Yellow: #FFE535;
+    --Light-Yellow: #FFFBE6;
     --White: #FFF;
+    --Black: #1D211E;
 
     /* font */
     --Primary-Font: "Chivo", sans-serif;
@@ -113,11 +116,14 @@ header {
 }
 
 .menu {
-    display: inline-flex;
-    padding: 12.447px 0 0 22.632px;
-    justify-content: flex-end;
+    width: var(--Width);
+    margin: 0;
+    display: flex;
+    padding: 12.447px 22.632px;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 11.289px;
+    background: var(--Light-Yellow, #FFFBE6);
 }
 
 .menu > li {
@@ -129,9 +135,10 @@ header {
     font-family: var(--Primary-Font);
     font-size: 13.579px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 16.974px; /* 125% */
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 main {
@@ -176,9 +183,6 @@ main {
 
 /* .slideshow {
     scroll-snap-type: x mandatory;
-    margin: 0 auto;
-    padding: 30px 0;
-    max-width: 800px;
     white-space: nowrap;
     overflow-x: scroll;
 }
@@ -186,13 +190,12 @@ main {
 .slideshow > .slide {
     scroll-snap-align: center;
     display: inline-block;
-    margin: 0 20px;
-    width: 40%;
     white-space: normal;
     overflow: hidden;
 } */
 
 .slideshow {
+    margin: 8px;
     display: inline-flex;
     align-items: flex-start;
     gap: 8px;
@@ -221,4 +224,157 @@ main {
     height: auto;
     border-radius: 4px;
     object-fit: cover;
+}
+
+.rating-info {
+    margin: 0;
+    width: 336px;
+    height: 15px;
+    padding-left: 16px;
+    /* padding: 12px 16px 0; */
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.rating-icon {
+    width: 85px;
+    height: 14.2px;
+    flex-shrink: 0;
+}
+
+.rating-desc {
+    /* width: 257px; */
+    height: 15px;
+    flex-shrink: 0;
+
+    color: #5B5B5B;
+    text-align: center;
+    font-family: Chivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px; /* 107.143% */
+}
+
+.rating-desc > strong{
+    color: #5B5B5B;
+    font-family: Chivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    /* text-decoration-line: underline; */
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.product-content-title {
+    width: 358px;
+    height: 80px;
+    margin: 7px 16px;
+
+    color: var(--Black, #1D211E);
+    font-family: "Passion One";
+    font-size: 42px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 40px; /* 95.238% */
+}
+
+.product-price-info {
+    margin: 4px 124px 24px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.product-price-info > .original-price {
+    color: var(--Grey, #959595);
+    font-family: Chivo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+
+.product-price-info > .current-price {
+    color: var(--Black, #1D211E);
+    font-family: Chivo;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.product-price-info > .discount-info {
+    display: flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    border-radius: 4px;
+    background: var(--Vivid-Yellow, #FFE535);
+
+    color: var(--Black, #242328);
+    text-align: center;
+    font-family: Chivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.product-content-desc {
+    margin: 0 16px;
+    display: flex;
+    width: 358px;
+    padding: 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.product-content-desc > span {
+    margin-bottom: 8px;
+
+    color: var(--Black, #1D211E);
+    font-family: Chivo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px; /* 93.75% */
+}
+
+.product-content-desc > ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.product-content-desc > ul > li {
+    /* list-style-type: none; */
+    list-style-image: url('../icons/Check.svg');
+    margin-left: 26px;
+    padding-left: 0px;
+
+    text-align: left;
+    color: var(--Black, #1D211E);
+    font-family: Chivo;
+    font-size: 16px;
+    font-style: light;
+    font-weight: 200;
+    line-height: 15px; 
 }
