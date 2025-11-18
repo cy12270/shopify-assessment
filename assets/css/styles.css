@@ -657,13 +657,38 @@ main {
 }
 
 .two-item {
+    /* make the container a positioned box so child layers can be stacked */
+    position: relative;
+    width: 97px; /* match .one-item visual size */
+    height: 74px;
     transform-origin: center center;
     transform: scale(1.25);
-    width: auto;
-    height: 74px;
+}
+
+.two-item .layer1,
+.two-item .layer2 {
+    /* base: position both layers to fill the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.two-item .layer1 {
+    z-index: 1;
+    transform: translate(-10px, 0);
+}
+
+.two-item .layer2 {
+    z-index: 2;
+    transform: translate(18px, 0);
 }
 
 .two-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* keep the image filling the box while preserving ratio */
+    border-radius: 4px;
 }
+
