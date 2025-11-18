@@ -494,11 +494,11 @@ main {
     font-family: Chivo;
     font-size: 10px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
 }
 
-.price-group {
+.frequency-option > .price-group {
     display: flex;
     align-items: flex-end; /* right align */
     gap: 2px;
@@ -511,7 +511,7 @@ main {
     font-family: Chivo;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     text-decoration: line-through;
 }
@@ -543,26 +543,127 @@ main {
 }
 
 .bundle-save > .options {
+    margin-top: 25px;
     width: 350px;
     height: 138px;
-
     display: flex;
     gap: 9px;
+    align-items: center;
 }
 
-.options > .option {
+.options > .option,
+.option.special {
     width: 108px;
-    height: 117px;
-
+    height: 117px; /* same height for all */
+    position: relative; /* allows label to float inside */
     border-radius: 8px;
+}
+
+.option.selected {
     border: 1px solid #000;
     background: #FFF;
     box-shadow: 0 4px 0 0 #000;
 }
 
 .option.special {
-    width: 108px;
-    height: 138px;
-    border-radius: 0 0 8px 8px;
+    /* display: flex; */
     border: 1px solid #DEDEDE;
+    border-radius: 0 0 8px 8px;
+}
+
+.option.special > .label {
+    position: absolute;
+    top: -21.5px;            /* moves above the box */
+    left: -1px;
+    width: 109.5px;
+    height: 21px;
+
+    /* align text vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 4px 6px; */
+    background: #FEDB36;
+    border-radius: 8px 8px 0 0;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.option > .option-desc {
+    width: 70px;
+    height: 15px;
+    color: var(--Black);
+    text-align: center;
+    font-family: Chivo;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px; /* 150% */
+    letter-spacing: -0.2px;
+}
+
+.option > .option-desc {
+    margin: 10px 19px;
+}
+
+.option.special > .option-desc {
+    margin: 4px 19px;
+}
+
+.option > .price-group {
+    height: 12px;
+
+    margin: 3.5px 2.5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.option .original-price { 
+    margin: 0 1px;
+    color: rgba(4, 35, 36, 0.50);
+    text-align: center;
+    font-family: Chivo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12px; /* 100% */
+    text-decoration-line: line-through;
+}
+
+.option .current-price {
+    margin: 0 1px;
+    color: #1D211E;
+    text-align: center;
+    font-family: Chivo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 12px; /* 100% */
+}
+
+.one-item {  
+    transform-origin: center center;
+    transform: scale(1.25);
+    display: block;
+    width: auto;
+    height: 74px;
+}
+
+.one-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.two-item {
+    transform-origin: center center;
+    transform: scale(1.25);
+    width: auto;
+    height: 74px;
+}
+
+.two-item img {
+    width: 100%;
+    height: 100%;
 }
