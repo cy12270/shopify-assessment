@@ -536,18 +536,18 @@ main {
 }
 
 .bundle-save {
-    margin: 0 var(--Horizontal-Margin) var(--Vertical-Margin);
+    margin: 0 var(--Horizontal-Margin) 15px;
+    /* width: 350px; */
+    /* height: 125px; */
 
-    width: 350px;
-    height: 125px;
 }
 
 .bundle-save > .options {
     margin-top: 25px;
-    width: 350px;
+    /* width: 350px; */
     height: 138px;
     display: flex;
-    gap: 9px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -728,4 +728,30 @@ main {
 .three-item .layer3 {
     z-index: 3;
     transform: translate(1px, 7px);
+}
+
+.order-button {
+    margin: 0 var(--Horizontal-Margin);
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 8px;
+    background: #F5F5F5;
+}
+
+.order-button > span {
+    color: #1D211E;
+    font-family: Chivo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: -0.14px;
+}
+
+.order-button > span > strong {
+    font-weight: 600;
 }
