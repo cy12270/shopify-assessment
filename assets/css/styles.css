@@ -657,9 +657,8 @@ main {
 }
 
 .two-item {
-    /* make the container a positioned box so child layers can be stacked */
     position: relative;
-    width: 97px; /* match .one-item visual size */
+    width: 97px;
     height: 74px;
     transform-origin: center center;
     transform: scale(1.25);
@@ -667,7 +666,6 @@ main {
 
 .two-item .layer1,
 .two-item .layer2 {
-    /* base: position both layers to fill the container */
     position: absolute;
     top: 0;
     left: 0;
@@ -692,3 +690,42 @@ main {
     border-radius: 4px;
 }
 
+.three-item {
+    position: relative;
+    width: 97px;
+    height: 74px;
+    transform-origin: center center;
+    transform: scale(1.1);
+}
+
+.three-item .layer1,
+.three-item .layer2,
+.three-item .layer3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.three-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.three-item .layer1 {
+    z-index: 1;
+    transform: translate(-17px, 0);
+}
+
+.three-item .layer2 {
+    z-index: 2;
+    transform: translate(24px, 0);
+}
+
+.three-item .layer3 {
+    z-index: 3;
+    transform: translate(1px, 7px);
+}
