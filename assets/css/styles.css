@@ -176,6 +176,7 @@ main {
 }
 
 .product-image-container {
+    object-fit: cover;
 }
 
 .product-image {
@@ -183,6 +184,9 @@ main {
     padding: 0;
 }
 
+.product-image img {
+    width: var(--Width);
+}
 .search-icon {
     display: inline;
     position: absolute;
