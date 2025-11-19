@@ -145,11 +145,6 @@ header {
     text-decoration: none;
 }
 
-.underlined {
-    color: var(--Black);
-    border-bottom: 2.26px solid var(--Black);
-}
-
 /* make the underlined state more specific so it overrides the
    earlier .menu > li > .menu-item color rule (specificity issue) */
 .menu > li > .menu-item.underlined {
