@@ -17,6 +17,11 @@
     --Vertical-Margin: 24px;
 }
 
+/* hide page scrollbar */
+html { scrollbar-width: none; } /* Firefox */
+body { -ms-overflow-style: none; } /* IE and Edge */
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
+
 body {
     margin: 0;
     padding: 0;
@@ -112,8 +117,16 @@ header {
     line-height: 0; /* 0% */
 }
 
+.with-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.with-scrollbar::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+}
+
 .menu {
-    /* width: var(--Width); */
     margin: 0;
     display: flex;
     padding: 12.447px 22.632px 0;
@@ -137,7 +150,7 @@ header {
 
 .menu > li > .menu-item {
     margin-right: 22.63px;
-    padding-bottom: 12.447px;
+    /* padding-bottom: 12.447px; */
     color: rgba(29, 33, 30, 0.50);
     font-family: var(--Primary-Font);
     font-size: 13.579px;
@@ -149,12 +162,20 @@ header {
 }
 
 .menu > li > .menu-item.underlined {
-    color: var(--Black);
+    padding-bottom: 10px;
     border-bottom: 2.26px solid var(--Black);
+}
+
+.menu > li > .menu-item.underlined {
+    color: var(--Black);
+    /* border-bottom: 2.26px solid var(--Black); */
 }
 
 main {
     width: var(--Width);
+}
+
+.product-image-container {
 }
 
 .product-image {
