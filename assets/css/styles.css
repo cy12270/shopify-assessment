@@ -434,10 +434,10 @@ main {
 }
 
 .frequency-option {
-    margin: 2px 16px 0 0;
+    margin: 0 16px 0 0;
     display: flex;
     width: 323px;
-    padding: 14px 16px 18px 16px;
+    padding: 14px 16px;
     justify-content: space-between;
     align-items: center;
 }
@@ -822,7 +822,7 @@ main {
 }
 
 .video-list {
-    margin: var(--Vertical-Margin) 0 0 var(--Horizontal-Margin);
+    margin: var(--Vertical-Margin) var(--Horizontal-Margin);
     display: flex;
     gap: 7px;
 }
@@ -916,4 +916,41 @@ main {
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+}
+
+.other-info {
+    /* display: flex; */
+    /* width: 357px; */
+    margin: 49px var(--Horizontal-Margin) var(--Vertical-Margin);
+    /* padding: 12px 16px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-button {
+    display: flex;
+    /* width: 357px; */
+    /* margin: 0 var(--Horizontal-Margin); */
+    margin-bottom: 8px;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    border-top: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 4px solid #E5E5E5;
+    border-left: 1px solid #E5E5E5;
+}
+
+.info-label > .icon img {
+    transform: translateY(3px);
+}
+
+.info-button > .info-label > span {
+    color: #1D211E;
+    font-family: Chivo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
 }
