@@ -841,6 +841,7 @@ main {
     background-size: cover;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
         lightgray 50% / cover no-repeat, #D9D9D9;
+
 }
 
 .video1 {
@@ -853,4 +854,16 @@ main {
 
 .video3 {
     background-image: url("../images/video3.jpg");
+}
+
+.playicon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* flex-shrink: 0; */
+    padding: 81px 37px;
+    
+    /* fill: rgba(255, 255, 255, 0.10); */
+    /* stroke-width: 1.404px; */
+    /* stroke: rgba(255, 255, 255, 0.80); */
 }
