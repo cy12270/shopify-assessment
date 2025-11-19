@@ -755,3 +755,102 @@ main {
 .order-button > span > strong {
     font-weight: 600;
 }
+
+.add-to-cart {
+    display: flex;
+    /* width: 350px; */
+    margin: 12px var(--Horizontal-Margin);
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+    background: var(--Yellow, #FEDB36);
+}
+
+.add-to-cart > span {
+    color: #0D2B09;
+    text-align: center;
+    font-family: Chivo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 24px; /* 133.333% */
+    text-transform: uppercase;
+}
+
+.shipping-returns {
+    margin: 0 var(--Horizontal-Margin);
+    display: flex;
+    /* width: 350px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shipping-returns > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.shipping-returns > div > span {
+    color: rgba(29, 33, 30, 0.60);
+    font-family: Chivo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+}
+
+.shipping-returns > div > span > strong {
+    color: var(--Black);
+}
+
+.payments {
+    margin: 15px var(--Horizontal-Margin);
+    display: flex;
+    /* width: 350px; */
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px dashed red; */
+}
+
+.payments > .icon {
+    fill: var(--Base-White, #FFF);
+    stroke-width: 1px;
+    stroke: var(--Gray-100, #F2F4F7);
+}
+
+.video-list {
+    margin: var(--Vertical-Margin) var(--Horizontal-Margin);
+    display: flex;
+    gap: 7px;
+}
+
+.video1,
+.video2,
+.video3 {
+    width: 114px;
+    height: 202.518px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border-bottom: 4px solid var(--Yellow, #F1C40F);
+    background-position: 50% 50%;
+    background-size: cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+        lightgray 50% / cover no-repeat, #D9D9D9;
+}
+
+.video1 {
+    background-image: url("../images/video1.jpg");
+}
+
+.video2 {
+    background-image: url("../images/video2.jpg");
+}
+
+.video3 {
+    background-image: url("../images/video3.jpg");
+}
