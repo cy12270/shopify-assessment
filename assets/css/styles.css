@@ -18,9 +18,13 @@
 }
 
 /* hide page scrollbar */
-html { scrollbar-width: none; } /* Firefox */
-body { -ms-overflow-style: none; } /* IE and Edge */
-body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* firefox */
+html {
+    scrollbar-width: none;
+}
 
 body {
     margin: 0;
@@ -264,12 +268,14 @@ main {
 }
 
 .rating-icon {
-    width: 85px;
+    margin: 0 0 5px;
+    width: 90px;
     height: 14.2px;
     flex-shrink: 0;
 }
 
 .rating-desc {
+    margin: 5px 0;
     /* width: 257px; */
     height: 15px;
     flex-shrink: 0;
