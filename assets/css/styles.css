@@ -587,6 +587,11 @@ main {
     border-radius: 8px;
 }
 
+.option .label {
+    font-family: var(--Primary-Font);
+    font-weight: 600;
+}
+
 .option.selected {
     border: 1px solid #000;
     background: #FFF;
