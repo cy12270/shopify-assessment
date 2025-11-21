@@ -18,12 +18,20 @@
 }
 
 /* hide page scrollbar */
-body::-webkit-scrollbar {
+
+.hide-scrollbars {
+  /* For Webkit browsers */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
     display: none;
-}
-/* firefox */
-html {
-    scrollbar-width: none;
+  }
+
+  /* For Firefox */
+  scrollbar-width: none;
+
+  /* For IE and Edge */
+  -ms-overflow-style: none;
 }
 
 body {
