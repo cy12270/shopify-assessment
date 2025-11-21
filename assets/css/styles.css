@@ -200,6 +200,17 @@ main {
     width: var(--Width);
 }
 
+.triangle-bottom-right img {
+    -webkit-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    position: relative;
+    /*bottom:0;*/
+    /*right:0;*/
+}
+
+.triangle-bottom-right {
+    background-color: var(--Light-Yellow, #FFE535);
+}
+
 .search-icon {
     display: inline;
     position: absolute;
@@ -244,6 +255,9 @@ main {
     border-radius: 4px;
     /* make each slide a non-shrinking flex item so horizontal overflow works */
     flex: 0 0 auto;
+    /*padding: 1px;*/
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .slide-image {
@@ -254,7 +268,7 @@ main {
 .slide-image > img {
     max-width: 75px;
     height: auto;
-    border-radius: 4px;
+    border-radius: 2px; /* smaller than parent */
     object-fit: cover;
 }
 
