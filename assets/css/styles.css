@@ -145,7 +145,7 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     background: var(--Light-Yellow, #FFFBE6);
-    border-bottom: 2.26px solid var(--Light-Yellow);
+    /*border-bottom: 2.26px solid var(--Light-Yellow);*/
     /* make menu horizontally scrollable on narrow viewports */
     overflow-x: auto;
     overflow-y: hidden;
@@ -164,7 +164,7 @@ header {
     margin-right: 22.63px;
     /* padding-bottom: 12.447px; */
     color: rgba(29, 33, 30, 0.50);
-    font-family: var(--Primary-Font);
+    font-family: var(--Primary-Font), sans-serif;
     font-size: 13.579px;
     font-style: normal;
     font-weight: 900;
