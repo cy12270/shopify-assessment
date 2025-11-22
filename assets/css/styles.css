@@ -189,6 +189,7 @@ main {
 
 .product-image-container {
     object-fit: cover;
+    background-color: var(--Light-Yellow, #FFE535);
 }
 
 .product-image {
@@ -200,15 +201,61 @@ main {
     width: var(--Width);
 }
 
-.triangle-bottom-right img {
-    -webkit-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
-    position: relative;
-    /*bottom:0;*/
-    /*right:0;*/
+.product-image.triangle-bottom-right-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/product_image_02_colored_pattern.png');
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    z-index: 1;
 }
 
+/* ensure the product image sits above background */
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    position: relative;
+    z-index: 2;
+}
+
+
 .triangle-bottom-right {
-    background-color: var(--Light-Yellow, #FFE535);
+    width: 75px;
+    height: 75px;
+    position: relative;
+    border-radius: 4px;
+    overflow: visible; /* important */
+}
+
+/* Triangle background layer */
+.triangle-bottom-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/product_image_02_colored_pattern.png');
+
+    /* triangle shape */
+    -webkit-clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+
+    z-index: 1;
+    border-radius: 4px;
+}
+
+/* Foreground image stays full and centered */
+.triangle-bottom-right .item-img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    width: 65%;      /* adjust as needed */
+    height: 65%;
+    object-fit: contain;
+    z-index: 2;      /* above triangle */
+    pointer-events: none; /* optional */
+    transform: scale(1.5);
 }
 
 .search-icon {
@@ -255,9 +302,9 @@ main {
     border-radius: 4px;
     /* make each slide a non-shrinking flex item so horizontal overflow works */
     flex: 0 0 auto;
-    /*padding: 1px;*/
     box-sizing: border-box;
     overflow: hidden;
+    background-color: var(--Light-Yellow, #FFE535);
 }
 
 .slide-image {

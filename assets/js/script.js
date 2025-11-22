@@ -9,27 +9,37 @@ menuItems.forEach(item => {
 });
 
 // --- slideshow: clicking a thumbnail updates the main product image ---
+// --- and ONLY slide 2 updates the background ---
+
 const slides = document.querySelectorAll('.slideshow .slide');
 const mainImage = document.querySelector('.product-image img');
+const mainContainer = document.querySelector('.product-image');
 
-if (slides && slides.length && mainImage) {
-    slides.forEach(slide => {
-        // make it obvious thumbnails are clickable
+if (slides.length && mainImage && mainContainer) {
+
+    slides.forEach((slide, index) => {
         slide.style.cursor = 'pointer';
 
         slide.addEventListener('click', () => {
+
             // remove current-slide from others
             slides.forEach(s => s.classList.remove('current-slide'));
 
-            // mark this as current
+            // set current slide
             slide.classList.add('current-slide');
 
-            // find the image inside the clicked slide and copy its src/alt
+            // update the main image
             const img = slide.querySelector('img');
             if (img) {
-                // replace main product image
                 mainImage.src = img.src;
                 if (img.alt) mainImage.alt = img.alt;
+            }
+
+            // --- ONLY SLIDE 2 changes background ---
+            if (index === 1) {
+                mainContainer.classList.add('triangle-bottom-right-bg');
+            } else {
+                mainContainer.classList.remove('triangle-bottom-right-bg');
             }
         });
     });
