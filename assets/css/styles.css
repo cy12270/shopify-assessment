@@ -6,6 +6,7 @@
     --Bright-Yellow: #FFE535;
     --Vivid-Yellow: #FFE535;
     --Light-Yellow: #FFFBE6;
+    --Background-Fill-Yellow: #FFF8CC;
     --White: #FFF;
     --Black: #1D211E;
 
@@ -189,7 +190,7 @@ main {
 
 .product-image-container {
     object-fit: cover;
-    background-color: var(--Light-Yellow, #FFE535);
+    background-color: var(--Background-Fill-Yellow, #FFF8CC);
 }
 
 .product-image {
@@ -304,7 +305,7 @@ main {
     flex: 0 0 auto;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: var(--Light-Yellow, #FFE535);
+    background-color: var(--Background-Fill-Yellow, #FFF8CC);
 }
 
 .slide-image {
